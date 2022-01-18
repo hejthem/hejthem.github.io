@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Problems</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">home</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html#nav">About</a></li>
+							<li><a href="approach.html#nav">Approach</a></li>
+							<li><a href="results.html#nav">Results</a></li>
+							<li class="active"><a href="problems.html#nav">Problems</a></li>
+							<li><a href="group.html#nav">Group</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/hejthem/GIS_Project" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Problems</h1>
+									<p>During some stages of the project we have encountered a few problems, which we are going to describe and give our solutions how to handle them.</p>
+								</header>
+								
+								<hr />
+									<h3>Problem while running the RF algorithm </h3>
+									<dl>
+										<dt>Software</dt>
+										<dd>
+											<p>QGIS</p>
+										</dd>
+										<dt>Description</dt>
+										<dd>
+											<p>During the first tries of classification with the RF model we had some errors as shown below:</p>
+										</dd>
+										<span class="image fit"><img src="images/problem_rf.png" alt="" /></span>
+										<dt>Solution</dt>
+										<dd>
+											<p> Thanks to the help of prof. Yordanov we figured out it was the result of a slightly different resolution of the dusaf raster and the null values in the aspect raster. After resampling the dusaf raster and replacing the Null values in the aspect raster, we also changed the extension of all raster layers to .tif. After that we didn’t have any issues with the algorithm.</p>
+										</dd>
+									</dl>
+				
+									<h3>Problem with styles from QGIS on GeoServer</h3>
+									<dl>
+										<dt>Software</dt>
+										<dd>
+											<p>GeoServer and QGIS</p>
+										</dd>
+										<dt>Description</dt>
+										<dd>
+											<p>Styles imported to GeoServer from SLD files created by exporting style from QGIS sometimes they do not look the same.</p>
+										</dd>
+										<span class="image fit"><img src="images/problem_styling.png" alt="" /></span>
+										<dt>Solution</dt>
+										<dd>
+											<p>Only known solution as of right know is to manually correct sld files created by QGIS or writing sld style from the scratch, as the problem seems to be related to different namespaces used by default in geoserver sld styling (sld) and in qgis(se).</p>
+										</dd>
+									</dl>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="alt">
+							<h3>Authors: Maciej Rzewuski, Julia Leonardi | Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+							</h3>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>Authors: Maciej Rzewuski, Julia Leonardi </li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

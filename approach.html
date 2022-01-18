@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.11.0/build/ol.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.11.0/css/ol.css">
+		<script src="http://rawgit.com/walkermatt/ol-layerswitcher/master/dist/ol-layerswitcher.js"></script>
+		<link rel="stylesheet" href="http://rawgit.com/walkermatt/ol-layerswitcher/master/src/ol-layerswitcher.css">		
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html#nav" class="logo">home</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html#nav">About</a></li>
+							<li class="active"><a href="approach.html#nav">Approach</a></li>
+							<li><a href="results.html#nav">Results</a></li>
+							<li><a href="problems.html#nav">Problems</a></li>
+							<li><a href="group.html#nav">Group</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/hejthem/GIS_Project" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Approach</h1>
+									<p>To achieve our goal of creating susceptibility maps and assesing exposure we used GIS software and spatial data to carry out analysis.</p>
+								</header>
+								
+								<h2>Technologies</h2>
+								Technologies used for this project are connected to GIS and web, as the projects deals with spatial data and ways of sharing it on the internet.
+									<ul>
+										<li>GeoServer.</li>
+										<p>Used for creating services, which provide spatial data for the website.</p>
+										<li>QGIS + QGIS Processing Toolbox (GRASS GIS, R)</li>
+										<p>Used for all kind of spatial analysis tasks required for this project.</p>
+										<li>JavaScript + OpenLayers.</li>
+										<p>Used for embeding maps on the website.</p>
+										<li>HTML.</li>
+										<p>Used to create the website with informations about the project.</p>
+									</ul>
+								<h2>Data used</h2>
+								<p>Data considered for the Landslide Susceptibility Mapping side of the project are environmental factors as the phenomenon of landslide is strictly dependent on them. Data used for the second part of assesing exposure are population and buildings maps. Most of the data was provided with the assignment but some had to be gathered, thus below there is a list of the names of data used and its sources.</p>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Description</th>
+												<th>Source</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Landslide inventory</td>
+												<td>Data about landslides in the region.</td>
+												<td>Provided as LS_inventory.gpkg file.</td>
+											</tr>
+											<tr>
+												<td>Digital Terrain Model</td>
+												<td>Digital model of the terrain of the region.</td>
+												<td>Provided as DTM.tif file.</td>
+											</tr>
+											<tr>
+												<td>Non-landslide areas</td>
+												<td>Data about areas, which are certain to have no possibility of landslide occurence.</td>
+												<td>Derived from dtm.</td>
+											</tr>
+											<tr>
+												<td>Aspect</td>
+												<td>Aspect data of the region.</td>
+												<td>Derived from dtm.</td>
+											</tr>
+											<tr>
+												<td>Slope</td>
+												<td>Slope data about the region.</td>
+												<td>Derived from dtm.</td>
+											</tr>
+											<tr>
+												<td>Plan curvature</td>
+												<td>Plan curvature of the region.</td>
+												<td>Derived from dtm.</td>
+											</tr>
+											<tr>
+												<td>Profile Curvature</td>
+												<td>Profile curvature of the region.</td>
+												<td>Derived from dtm.</td>
+											</tr>
+											<tr>
+												<td>Roads</td>
+												<td>Buffer zone of the roads in the region.</td>
+												<td>Provided as roads_buffer.gpkg file.</td>
+											</tr>
+											<tr>
+												<td>Geological faults</td>
+												<td>Buffer zone of the geological faults in the region.</td>
+												<td>Provided as faults_buffer.gpkg</td>
+											</tr>
+											<tr>
+												<td>Rivers</td>
+												<td>Buffer zone of the rivers in the region.</td>
+												<td>Provided as river_buffer.gpkg</td>
+											</tr>
+											<tr>
+												<td>Land use and land cover</td>
+												<td>Data about the land use and its cover.</td>
+												<td>Provided as DUSAF.tif file.</td>
+											</tr>
+											<tr>
+												<td>NDVI</td>
+												<td>Normalized difference vegetation index data, showing vegetation in the region.</td>
+												<td>Provided as NDVI.tiff file.</td>
+											</tr>
+											<tr>
+												<td>Population</td>
+												<td>Population data in the region.</td>
+												<td>Downloaded from worldpop.org as tif file.</td>
+											</tr>
+											<tr>
+												<td>Buildings</td>
+												<td>Buildings data in the region.</td>
+												<td>Downloaded from worldpop.org as tif file.</td>
+											</tr>
+										</tbody>
+										<tfoot>
+										</tfoot>
+									</table>
+								</div>
+
+								<h2>Susceptibility mapping</h2>
+								<p>First part of the project involved creating susceptibility maps of the region with provided tool written in R. In order to use this tool efficiently and correctly environmental factor data used for this part had to be preprocessed, before calculations. Whole process was done by using QGIS software tools and added plugins.   </p>
+								<h3>Data preprocessing</h3>
+								Data preprocessing was carried out in the following steps:
+								<ul>
+									<h4><li>clipping raster data using as a mask vector layer of the region;</li></h4>
+									<h4><li>resampling NDVI layer according to the DTM;</li></h4>
+									<h4><li>cliping all vector layers using as a mask the vector layer of the region;</li></h4>
+									<h4><li>rasterize all vector layers, except the Landslide Inventory;</li></h4>
+									<h4><li>extracting environmental factors from the DTM;</li></h4>
+									<h4><li>cliping the landslide inventory layer using as a mask the vector layer of the region;</li></h4>
+									<h4><li>defining areas with low possibilty of landslides (NLZ);</li></h4>
+									<h4><li>filtering the NLZ raster by removing very small patches of pixels;</li></h4>
+									<h4><li>vectorizing the resulted raster;</li></h4>
+									<h4><li>removing NLZ zones;</li></h4>
+									<h4><li>prepairing test and training data for MLM model of susceptibility map generation;</li></h4>
+								</ul>
+								<p> We decided to create four different test and training datasets with following parameters:</p>
+								<ul>
+									<li>1000 points in 70/30 ratio</li>
+									<li>1000 points in 80/20 ratio</li>
+									<li>2000 points in 70/30 ratio</li>
+									<li>2000 points in 80/20 ratio</li>
+								</ul>
+
+								<p>All the outputs of this step are available in the "Data and outputs vizualization on the map from the first two steps." section of this page.</p>
+								<h3>Susceptibility map generation</h3>
+								Using preprocessed data the process of creating landslide susceptibility maps was carried for each dataset created in the last step of preprocessing. Using provided R tool we were able to produce susceptibility maps for each of them and were able to create error matrices, which were used to evaluate quality of the trained models.  
+								<h2>Assesing exposure</h2>
+								<h3>Data preprocessing for exposure assessment</h3>
+								<p>The preprocessing of the data for exposure assessment was done as follows: 
+								<ul>
+									<h4><li>reprojecting the layers of the buildings and population;</li></h4>
+									<h4><li>clipping the layers by mask to the analyzed region;</li></h4>
+									<h4><li>reclassifying the Landslide Susceptibility Maps into 4 classes of landslide hazard with the Raster Calculator;</li></h4>
+									<h4><li>resampling the reclassified Landslide Susceptibility Maps using the resolution of the population/building raster maps.</li></h4>
+								</ul>
+								<h3>Exposure assessment</h3>
+								<p>The  exposure assessment was done as follows: 
+								<ul>
+									<h4><li>computing the population counts in each susceptibility class;</li></h4>
+									<h4><li>plotting the percentage of population per each susceptibility class;</li></h4>
+								</ul>
+								<p>All the steps above, were done only for the susceptibility maps created from training datasets with 70/30 ratio.</p>
+								<p>All the outputs of this step are available in the "Data and outputs vizualization on the map from the first two steps." section of this page.</p>
+								<h2>Data and outputs vizualization on the map from the first two steps.</h2>
+								<div id="data_map"></div>
+								<h2>Sharing results on website</h2>
+								<h3>Setting geospatial services on geoserver</h3>
+								<p>Setting of geoserver to share geospatial data came down to: 
+									<ul>
+										<h4><li>installing and configuring geoserver;</li></h4>
+										<h4><li>uploading all needed layers as storages;</li></h4>
+										<h4><li>creating layers from storages and styling them with sld files;</li></h4>
+										<h4><li>publishing data as wms or wfs serivces.;</li></h4>
+									</ul>
+								<h3>Creating website</h3>
+								<p>Website was creating from template available <a href="https://html5up.net">here.</a> We choose this template for it's look and easy customization. Customization of website involved changing html, css and javascript code. Most of the work was to insert desired elements to the website by changing html document. Whole process didn't involve antyhing particularly problematic, unsual or difficult from standard website development, except for the insertion of maps on the website, which is desribed in the dedicated section. </p>
+								<h3>Adding maps to the website</h3>
+								<p>Maps elements on the website were added with the use of <a href="https://openlayers.org/">OpenLayers API</a>, data for the maps was gathered from the services configured in GeoServer.</p>
+								<h4>How maps were added</h4>
+								<p>Firstly API was added to website by inserting script and stylesheets to the header. Then maps.js file was created and linked to html file. After that javascript was written, which created new map object responsible for drawing map in the created div, by passing it's name as parameter. </p>
+								<h4>Adding layers</h4>
+								<p>Layers were created as javascript ol.Layers objects with parameters, which included it's title, visibility, source and if it's a base map.</p>
+								<h4>Custom controls</h4>
+								<p>Custom controls were added to map by including them as parameters in map object. Only exception is layer switcher, which included had to be imported from additional library.</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="alt">
+							<h3>Authors: Maciej Rzewuski, Julia Leonardi | Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+							</h3>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>Authors: Maciej Rzewuski, Julia Leonardi </li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/maps.js"></script>
+
+	</body>
+</html>
